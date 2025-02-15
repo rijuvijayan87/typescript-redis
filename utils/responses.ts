@@ -8,7 +8,7 @@ export const successResonse = (
   return res.status(200).send({ success: true, message, data });
 };
 
-export const errorResonse = (
+export const errorResponse = (
   res: Response,
   status: number,
   error: string = "Error"
