@@ -10,5 +10,5 @@ export const validate =
       return;
     }
     req.body = result.data;
-    next();
+    return next();
   };

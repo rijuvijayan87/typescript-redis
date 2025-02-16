@@ -8,5 +8,5 @@ export const errorHandler = (
   next: NextFunction
 ) => {
   console.error(err);
-  errorResponse(res, 500, err);
+  return errorResponse(res, 500, err);
 };

@@ -1,11 +1,11 @@
 import type { Response } from "express";
 
-export const successResonse = (
+export const successResponse = (
   res: Response,
   data: any,
   message: string = "Success"
 ) => {
-  return res.status(200).send({ success: true, message, data });
+  res.status(200).send({ success: true, message, data });
 };
 
 export const errorResponse = (
@@ -13,5 +13,5 @@ export const errorResponse = (
   status: number,
   error: string = "Error"
 ) => {
-  return res.send(status).json({ success: false, error });
+  res.send(status).json({ success: false, error });
 };
